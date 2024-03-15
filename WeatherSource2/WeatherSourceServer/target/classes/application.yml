@@ -1,0 +1,9 @@
+server:
+  port: 8971
+spring:  application:    name:  WeatherSource
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+  client:
+    service-url:      defaultZone: http://localhost:8974/eureka/
