@@ -27,7 +27,13 @@ eureka:
     service-url:   
       defaultZone: http://localhost:8974/eureka/    
 
-
+openfeign使用   
+服务提供方   
+1.添加依赖spring-cloud-starter-openfeign    
+2.创建服务方法接口项目,在接口上上使用注解@FeignClient(name="注册服务名")     
+服务调用方   
+1.添加依赖spring-cloud-starter-openfeign,服务方法接口项目
+2.在启动类上添加注解@EnableFeignClients(basePackages={"服务方法接口包名1","服务方法接口包名2"})   
 
 
 
