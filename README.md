@@ -9,6 +9,7 @@
 天气服务:根据城市名字查询城市天气数据.使用Quartz定时将天气数据缓存到Redis里.
 
 Eureka使用
+
 服务器端:
 1.添加依赖:spring-cloud-starter-netflix-eureka-server
 2.application.yml文件新增
