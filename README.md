@@ -5,28 +5,27 @@
 城市数据服务:根据城市名字查询城市编码.使用jackson将json格式的城市数据文件转换成List<CitycodeDto>.   
 天气服务:根据城市名字查询城市天气数据.使用Quartz定时将天气数据缓存到Redis里.        
 
-Eureka使用
-服务器端:
-1.添加依赖:spring-cloud-starter-netflix-eureka-server
-2.application.yml文件新增
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:${server.port}/eureka/
-    register-with-eureka: false
-    fetch-registry: false
-3.启动类上添加注解@EnableEurekaServer
-
-客户端:
-1.添加依赖:spring-cloud-starter-netflix-eureka-client
-2.application.yml文件新增
-eureka:
-  instance:
-    prefer-ip-address: true
-    instance-id: ${spring.cloud.client.ip-address}:${server.port}
-  client:
-    service-url:
-      defaultZone: http://localhost:8974/eureka/
+Eureka使用        
+服务器端:    
+1.添加依赖:spring-cloud-starter-netflix-eureka-server    
+2.application.yml文件新增    
+eureka:   
+  client:   
+    service-url:   
+      defaultZone: http://localhost:${server.port}/eureka/   
+    register-with-eureka: false   
+    fetch-registry: false   
+3.启动类上添加注解@EnableEurekaServer  
+客户端:   
+1.添加依赖:spring-cloud-starter-netflix-eureka-client   
+2.application.yml文件新增    
+eureka:   
+  instance:   
+    prefer-ip-address: true   
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}   
+  client:    
+    service-url:   
+      defaultZone: http://localhost:8974/eureka/    
 
 
 
